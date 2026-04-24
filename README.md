@@ -3,7 +3,7 @@
 **Big Data & Analytical Intelligence | Data Science | Machine Learning | Cybersecurity**
 
 Barcelona, Spain  
-[LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-salero-691a7783/)
+[LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-luiz-a-37aa011a8/)
 
 ---
 
