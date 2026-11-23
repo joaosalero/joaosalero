@@ -2,7 +2,7 @@
 
 **AI Evaluation Engineering · Software Engineering · AI Security**
 
-Barcelona, Spain · [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-luiz-a-37aa011a8/) · [Professional profile](docs/profile.html)
+Barcelona, Spain · [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-luiz-a-37aa011a8/) · [Portfolio](https://joaosalero.github.io/joaosalero/) · [Professional profile](https://joaosalero.github.io/joaosalero/profile.html)
 
 I design evidence-grounded evaluations for AI agents and build software for security analysis. My work connects agent benchmarking, code review, machine learning and cybersecurity: define observable outcomes, investigate failures and make technical decisions explainable.
 
