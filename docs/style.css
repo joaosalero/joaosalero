@@ -453,6 +453,36 @@ summary::marker {
 .profile-main .experience-item {
   margin-block:1.6rem
 }
+.evidence-main {
+  max-width:860px
+}
+.evidence-index {
+  margin-top:1.5rem;
+  gap:.6rem 1.5rem
+}
+.evidence-index a {
+  text-decoration:underline
+}
+.evidence-main figure {
+  margin:1.4rem 0
+}
+.evidence-main figure a {
+  display:block
+}
+.evidence-main img {
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid var(--line)
+}
+.evidence-main figcaption {
+  color:var(--muted);
+  font-size:.92rem;
+  margin-top:.7rem
+}
+.evidence-detail {
+  margin-block:1rem
+}
 .experience-item p {
   font-size:1rem;
   color:var(--muted)

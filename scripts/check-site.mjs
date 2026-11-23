@@ -6,7 +6,9 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const site = path.join(root, 'docs');
 const pages = readdirSync(site).filter(name => name.endsWith('.html'));
-assert(pages.length >= 2, 'Portfolio and professional profile pages are required.');
+for (const required of ['index.html', 'profile.html', 'evidence.html']) {
+  assert(pages.includes(required), `Required page missing: ${required}`);
+}
 const documents = new Map(pages.map(name => [name, readFileSync(path.join(site, name), 'utf8')]));
 let checkedLinks = 0;
 
@@ -22,6 +24,11 @@ for (const [name, html] of documents) {
   assert.doesNotMatch(html, /<script\b|\son\w+=/i, `${name}: unexpected executable page code.`);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   assert.equal(new Set(ids).size, ids.length, `${name}: duplicate element ID.`);
+  for (const [img] of html.matchAll(/<img\b[^>]*>/gi)) {
+    assert.match(img, /\balt="[^"]+"/, `${name}: evidence image needs a description.`);
+    assert.match(img, /\bwidth="[1-9]\d*"/, `${name}: image width missing.`);
+    assert.match(img, /\bheight="[1-9]\d*"/, `${name}: image height missing.`);
+  }
 
   for (const [, attribute, raw] of html.matchAll(/\b(href|src)="([^"]+)"/g)) {
     assert(!/^javascript:/i.test(raw), `${name}: unsafe URL.`);
