@@ -1,105 +1,51 @@
 # João Salero
 
-**Big Data & Analytical Intelligence | Data Science | Machine Learning | Cybersecurity**
+**AI Evaluation Engineering · Software Engineering · AI Security**
 
-Barcelona, Spain  
-[LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-luiz-a-37aa011a8/)
+Barcelona, Spain · [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-luiz-a-37aa011a8/) · [Professional profile](docs/profile.html)
 
----
+I design evidence-grounded evaluations for AI agents and build software for security analysis. My work connects agent benchmarking, code review, machine learning and cybersecurity: define observable outcomes, investigate failures and make technical decisions explainable.
 
-## About Me
+## What I work on
 
-I have a background in **Data Science and Machine Learning**, currently focused on **Big Data and Analytical Intelligence**, with an emphasis on building practical, data-driven solutions.
+| Domain | Focus |
+| --- | --- |
+| AI evaluation | Agent benchmarking, deterministic reference outcomes, weighted rubrics, multi-step tool use and failure analysis |
+| Software engineering | API behaviour, error handling, compatibility, state management, code review and regression analysis |
+| AI security | Prompt-injection evaluation, access boundaries, authorised security testing and evidence handling |
+| Machine learning & data | NLP, model training and comparison, statistical modelling and retrieval evaluation |
 
-My work involves developing and optimizing machine learning models, particularly in **Natural Language Processing (NLP)** and **sentiment analysis**, using tools such as Python, R, and MongoDB.
+My recent work includes senior roles in agentic coding evaluation and agent benchmarking, alongside independent software projects. Client-specific tasks, data and assessment materials remain confidential.
 
----
+## Selected independent projects
 
-## Focus
+| Project | Engineering focus | Scope |
+| --- | --- | --- |
+| [AgentShield](https://github.com/joaosalero/agentshield) | C11 sensors, C++17 policy and risk engine, Java desktop; process exposure and supervised execution | Linux/WSL preview. Observability and supervision have explicit limits; this is not a complete OS sandbox. |
+| [Helix Sentinel](https://github.com/joaosalero/helix-sentinel) | FastAPI and Next.js security analytics, audit trails, ingestion and reporting | Development preview; review authentication, ingestion and tenant boundaries before deployment. |
+| [DataGuardian](https://github.com/joaosalero/dataguardian) | Go and Next.js file/URL inspection, structured findings and explainable risk scoring | Inspection runs in the application process; the application container is not a per-analysis sandbox. Findings do not guarantee content safety. |
+| [DupliGuard](https://github.com/joaosalero/dupliguard) | C/C++17 and Java file auditing with SHA-256 | Duplicate-file analysis; see the repository for filesystem assumptions and supported operations. |
+| [Football Scouting & Analysis](https://github.com/joaosalero/football_scouting_-_analysis) | Applied scouting studies and analytical tools | Educational and independent work, subject to the provenance, rights and limitations of its source material. |
 
-**Primary**  
-- Big Data & Analytical Intelligence  
+These projects are developed individually. Their repositories distinguish implemented behaviour, limitations and future work.
 
-**Core Skills**  
-- Data Science  
-- Machine Learning  
+## Technical toolkit
 
-**Complementary**  
-- Cybersecurity  
-- Software Development  
+- **Languages:** Python, Go, JavaScript, C, C++, Java, R and SQL.
+- **Applications & data:** FastAPI, Next.js, PostgreSQL, APIs and statistical modelling.
+- **AI tooling:** Ollama, Qdrant, local RAG workflows and model evaluation.
+- **Platforms:** Docker, GitHub Actions, Linux, Windows and WSL.
 
----
+## Education & training
 
-## Experience
+- Big Data and Analytical Intelligence — PUC-PR, in progress.
+- Statistics and Data Science MicroMasters Programme — MIT, in progress.
+- Ethical Hacking Training for CEHv12 — EC-Council, 2026. **Training; not a claim of CEH certification.**
+- IBM Cybersecurity Analyst Professional Certificate — IBM, 2023.
+- Data Science and Deep Learning — Data Science Academy, 2018–2021.
+- Bachelor of Physics — Universidade Federal do Rio de Janeiro, 2006–2010.
+- Professional Diploma in Football Scouting and Tactical Analysis — Barça Innovation Hub, 2026.
 
-**Junior Data Scientist / Machine Learning Engineer**
+**Languages:** Brazilian Portuguese (native), English (proficient), Spanish (basic).
 
-- Developed and optimized NLP models  
-- Analyzed complex datasets to generate actionable insights  
-- Designed and improved machine learning pipelines  
-- Performed hyperparameter tuning to enhance model performance  
-- Supported model evaluation and architecture decisions  
-
-Also contributed to dataset improvement and experimentation workflows, supporting continuous model development.
-
----
-
-## Technical Background
-
-- Big Data and Analytical Intelligence — PUC-PR (ongoing)  
-- Data Science & Deep Learning — Data Science Academy  
-- Statistics and Data Science — MIT MicroMasters (ongoing)  
-- Bachelor’s degree in Physics  
-
-- Cybersecurity training — IBM  
-- Ethical Hacking (EC-Council) — certification in progress  
-
----
-
-## Tech Stack
-
-**Languages**  
-Python • R • Java • Bash  
-
-**Data & Machine Learning**  
-NLP • Sentiment Analysis • Predictive Modeling • EDA • Statistical Modeling  
-
-**Data Tools**  
-Tableau • MongoDB  
-
-**Other**  
-ML Pipelines • API Integration • Data Processing Workflows  
-
----
-
-## Projects
-
-This GitHub is focused on building **practical, real-world projects**, including:
-
-- Data analysis and automation tools  
-- Security-oriented utilities (metadata handling, log analysis)  
-- Projects combining data, engineering, and applied problem solving  
-
----
-
-## Additional Work
-
-I also develop projects in **football scouting and technical analysis**, applying:
-
-- structured performance evaluation  
-- tactical interpretation  
-- data-informed analysis  
-
----
-
-## Approach
-
-- Focus on practical and usable solutions  
-- Avoid purely academic projects  
-- Continuous and structured technical growth  
-
----
-
-## Final Note
-
-This profile reflects a transition toward a more applied and engineering-oriented approach to data, with increasing integration of security and system-level thinking.
+For professional enquiries, contact me on [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-luiz-a-37aa011a8/).
