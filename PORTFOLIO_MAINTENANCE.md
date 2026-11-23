@@ -4,7 +4,7 @@ The profile README and static website describe the same professional focus. Webs
 
 ## GitHub Pages
 
-In this repository’s **Settings / Pages**, choose **Deploy from a branch**, select **main** and the **/docs** directory, then save. The intended address is `https://joaosalero.github.io/joaosalero/`. The profile repository remains `joaosalero/joaosalero`. Publishing status must be verified separately; having these source files does not mean the site is live.
+The published site is [joaosalero.github.io/joaosalero](https://joaosalero.github.io/joaosalero/), with a [printable professional profile](https://joaosalero.github.io/joaosalero/profile.html). In this repository’s **Settings / Pages**, the source is **Deploy from a branch**, **main**, **/docs**, with HTTPS enforced. The profile repository remains `joaosalero/joaosalero`. Verify subsequent deployments in GitHub Actions and on the public pages.
 
 The public site contains a printable professional overview rather than the original CV. Do not add private phone numbers, confidential client information or client evaluation materials. Confirm public contact information before adding it.
 
@@ -29,4 +29,8 @@ The check validates local HTML asset/link targets, fragment IDs, required access
 - Update the README and professional profile when verified professional information changes.
 - No analytics, remote fonts, cookies, JavaScript, forms or third-party embeds are used. External links open in the same tab.
 - Relative asset links support GitHub Pages’ repository subpath. Preserve them when adding pages.
-- After deployment is verified, replace the README’s source-file profile link with the deployed profile URL and add the live portfolio link.
+- After changes, verify both public pages and keep the README’s live portfolio/profile links aligned with the publishing path.
+
+## Publication verification
+
+On 23 November 2026, the published homepage and professional profile loaded successfully. Browser spot checks covered desktop and narrow mobile layouts, horizontal overflow, visible keyboard focus and native project-detail expansion. These checks do not constitute a WCAG audit.
