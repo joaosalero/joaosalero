@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspect project outputs, application screenshots and the technical decisions behind João Salero’s independent engineering work.">
+  <meta name="theme-color" content="#101c2b">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>Engineering evidence — João Salero</title>
+  <link rel="canonical" href="https://joaosalero.github.io/joaosalero/evidence.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=evidence1">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./" aria-label="João Salero, home">João Salero<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="./#work">Selected work</a><a href="evidence.html" aria-current="page">Evidence</a><a href="profile.html">Professional profile</a></nav>
+  </header>
+  <main class="profile-main wrap evidence-main" id="main">
+    <h1>Engineering evidence</h1>
+    <p class="profile-meta">Explore the inputs, decisions and outputs of four independent projects.</p>
+    <nav class="evidence-index" aria-label="Project evidence">
+      <a href="#agentshield">AgentShield</a><a href="#helix">Helix Sentinel</a><a href="#dataguardian">DataGuardian</a><a href="#dupliguard">DupliGuard</a>
+    </nav>
+
+    <section id="agentshield" aria-labelledby="agentshield-heading">
+      <h2 id="agentshield-heading">AgentShield</h2>
+      <p>Which policy decision does an operator see when an agent requests network or credential access? The Java desktop console replays a synthetic event stream so a reviewer can inspect each decision alongside the recorded exposure.</p>
+      <figure>
+        <a href="evidence/agentshield-demo.png" aria-label="Open the AgentShield console screenshot at full size">
+          <img src="evidence/agentshield-demo.png" width="1366" height="763" alt="AgentShield Demo Lab shows one credential, two resources and two policy decisions in the event table.">
+        </a>
+        <figcaption>Desktop console after nine synthetic events. The network request calls for approval and the credential request is denied. The capture demonstrates event presentation. Native supervision is exercised separately on Linux.</figcaption>
+      </figure>
+      <p>In a separate Ubuntu run, the supervisor launched a synthetic child that returned exit code 7. The evidence check authenticated eight audit records and confirmed redaction of the synthetic credential name.</p>
+      <p><a href="https://github.com/joaosalero/agentshield/blob/main/docs/PORTFOLIO_CASE_STUDY.md#reproduce-the-evidence">Case study and reproduction steps</a> · <a href="https://github.com/joaosalero/agentshield/actions/runs/45231899498/job/137893360003">Linux supervision run</a></p>
+    </section>
+
+    <section id="helix" aria-labelledby="helix-heading">
+      <h2 id="helix-heading">Helix Sentinel</h2>
+      <p>A rule match is only one step in investigating an event. Inspect how ingestion, detection and the alert lifecycle relate to the audit trail.</p>
+      <details class="evidence-detail">
+        <summary>View the open alert in the investigation console</summary>
+        <figure>
+          <a href="evidence/helix-alert.webp" aria-label="Open the Helix investigation screenshot at full size">
+            <img src="evidence/helix-alert.webp" width="687" height="800" loading="lazy" alt="Open medium-severity alert for a synthetic identity event. The investigation panel shows its matched event and context timeline.">
+          </a>
+          <figcaption>A browser selected the synthetic alert from the Next.js queue. The FastAPI service retrieved its persisted context from PostgreSQL. The panel captures the alert while open.</figcaption>
+        </figure>
+      </details>
+      <p>A separate API replay used PostgreSQL 16. One synthetic event matched the active rule. The alert moved from open to acknowledged and then closed, with two successful updates in the audit log.</p>
+      <p><a href="https://github.com/joaosalero/helix-sentinel/blob/main/docs/evidence/postgres-investigation.json">Inspect the investigation record</a> · <a href="https://github.com/joaosalero/helix-sentinel/blob/main/docs/showcase.md">Detection and investigation case study</a> · <a href="https://github.com/joaosalero/helix-sentinel/actions/runs/45233032382/job/137897411781">Database replay</a></p>
+    </section>
+
+    <section id="dataguardian" aria-labelledby="dataguardian-heading">
+      <h2 id="dataguardian-heading">DataGuardian</h2>
+      <p>The inspection service takes either a file or an HTTP response and records findings with severity. The highest severity selects a fixed score. The analysis runs inside the Go API process.</p>
+      <figure>
+        <a href="evidence/dataguardian-file.webp" aria-label="Open the DataGuardian analysis screenshot at full size">
+          <img src="evidence/dataguardian-file.webp" width="1152" height="490" loading="lazy" alt="DataGuardian displays a medium-severity author metadata finding and a risk score of 55 for public-fixture.pdf.">
+        </a>
+        <figcaption>The dashboard shows the result of uploading a 448-byte synthetic PDF. Its author field triggered a medium-severity metadata finding and a score of 55.</figcaption>
+      </figure>
+      <p>A separate test supplied an HTTP response through an in-memory transport. The URL analyser recorded the absence of HTTPS and assigned a low score of 10. The test made no external network request.</p>
+      <p><a href="https://github.com/joaosalero/dataguardian/blob/master/docs/PORTFOLIO_CASE_STUDY.md">File and URL inspection case study</a> · <a href="https://github.com/joaosalero/dataguardian/actions/runs/45231958846/job/137893562735">Dashboard capture run</a></p>
+    </section>
+
+    <section id="dupliguard" aria-labelledby="dupliguard-heading">
+      <h2 id="dupliguard-heading">DupliGuard</h2>
+      <p>The scanner groups paths by file size and hashes candidates with SHA-256. Its report describes what it read during the scan. Concurrent filesystem changes can affect the result.</p>
+      <p>In a four-file fixture totalling 40 bytes, the Linux CLI reported one duplicate group and 13 bytes of logical redundancy. It excluded a same-size file with different content and a file of unique size. The fixture check verified the names and contents after the scan.</p>
+      <p><a href="https://github.com/joaosalero/dupliguard/blob/main/docs/evidence/scan-report.json">Inspect the JSON report</a> · <a href="https://github.com/joaosalero/dupliguard/blob/main/docs/CASE_STUDY.md">Duplicate-file case study</a></p>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><p>João Salero · Independent engineering</p><a href="./#work">Back to selected work</a><a href="#main">Back to top</a></footer>
+</body>
+</html>

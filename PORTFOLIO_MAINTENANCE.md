@@ -10,7 +10,7 @@ The public site contains a printable professional overview rather than the origi
 
 ## Preview and review
 
-Serve `docs/` with a local static HTTP server, then review `index.html` and `profile.html` in a browser. Check desktop and narrow mobile widths, keyboard navigation, focus visibility, expanded project details, reduced-motion preferences and the profile’s print view.
+Serve `docs/` with a local static HTTP server, then review `index.html`, `evidence.html` and `profile.html` in a browser. Check desktop and narrow mobile widths, keyboard navigation, focus visibility, expanded project details, reduced-motion preferences and the profile’s print view.
 
 Run the portable structural check from the repository root:
 
@@ -28,8 +28,9 @@ The check validates local HTML asset/link targets, fragment IDs, required access
 - Do not publish benchmark results without a reproducible method and measured evidence.
 - Update the README and professional profile when verified professional information changes.
 - No analytics, remote fonts, cookies, JavaScript, forms or third-party embeds are used. External links open in the same tab.
+- Keep captures in `docs/evidence/`, set their intrinsic dimensions and describe the specific run or archived screen in the caption. Link to the case study for reproduction steps.
 - Relative asset links support GitHub Pages’ repository subpath. Preserve them when adding pages.
-- After changes, verify both public pages and keep the README’s live portfolio/profile links aligned with the publishing path.
+- After changes, verify the public pages and keep the README’s live portfolio/profile links aligned with the publishing path.
 
 ## Publication verification
 

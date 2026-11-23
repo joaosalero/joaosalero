@@ -27,7 +27,7 @@ My recent work includes senior roles in agentic coding evaluation and agent benc
 | [DupliGuard](https://github.com/joaosalero/dupliguard) | C/C++17 and Java file auditing with SHA-256 | Duplicate-file analysis; see the repository for filesystem assumptions and supported operations. |
 | [Football Scouting & Analysis](https://github.com/joaosalero/football_scouting_-_analysis) | Applied scouting studies and analytical tools | Educational and independent work, subject to the provenance, rights and limitations of its source material. |
 
-These projects are developed individually. Their repositories distinguish implemented behaviour, limitations and future work.
+These projects are developed individually. [Inspect project outputs, application screenshots and engineering case studies](https://joaosalero.github.io/joaosalero/evidence.html).
 
 ## Technical toolkit
 
