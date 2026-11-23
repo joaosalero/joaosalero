@@ -33,28 +33,37 @@
         </a>
         <figcaption>Desktop console after nine synthetic events. The network request calls for approval and the credential request is denied. The capture demonstrates event presentation. Native supervision is exercised separately on Linux.</figcaption>
       </figure>
-      <p><a href="https://github.com/joaosalero/agentshield/blob/main/docs/PORTFOLIO_CASE_STUDY.md">Case study and reproduction steps</a></p>
+      <p>In a separate Ubuntu run, the supervisor launched a synthetic child that returned exit code 7. The evidence check authenticated eight audit records and confirmed redaction of the synthetic credential name.</p>
+      <p><a href="https://github.com/joaosalero/agentshield/blob/main/docs/PORTFOLIO_CASE_STUDY.md#reproduce-the-evidence">Case study and reproduction steps</a> · <a href="https://github.com/joaosalero/agentshield/actions/runs/45231899498/job/137893360003">Linux supervision run</a></p>
     </section>
 
     <section id="helix" aria-labelledby="helix-heading">
       <h2 id="helix-heading">Helix Sentinel</h2>
       <p>A rule match is only one step in investigating an event. Inspect how ingestion, detection and the alert lifecycle relate to the audit trail.</p>
-      <p><a href="https://github.com/joaosalero/helix-sentinel/blob/main/docs/showcase.md">Detection and investigation case study</a></p>
+      <details class="evidence-detail">
+        <summary>View the open alert in the investigation console</summary>
+        <figure>
+          <a href="evidence/helix-alert.webp" aria-label="Open the Helix investigation screenshot at full size">
+            <img src="evidence/helix-alert.webp" width="687" height="800" loading="lazy" alt="Open medium-severity alert for a synthetic identity event. The investigation panel shows its matched event and context timeline.">
+          </a>
+          <figcaption>A browser selected the synthetic alert from the Next.js queue. The FastAPI service retrieved its persisted context from PostgreSQL. The panel captures the alert while open.</figcaption>
+        </figure>
+      </details>
+      <p>A separate API replay used PostgreSQL 16. One synthetic event matched the active rule. The alert moved from open to acknowledged and then closed, with two successful updates in the audit log.</p>
+      <p><a href="https://github.com/joaosalero/helix-sentinel/blob/main/docs/evidence/postgres-investigation.json">Inspect the investigation record</a> · <a href="https://github.com/joaosalero/helix-sentinel/blob/main/docs/showcase.md">Detection and investigation case study</a> · <a href="https://github.com/joaosalero/helix-sentinel/actions/runs/45233032382/job/137897411781">Database replay</a></p>
     </section>
 
     <section id="dataguardian" aria-labelledby="dataguardian-heading">
       <h2 id="dataguardian-heading">DataGuardian</h2>
       <p>The inspection service takes either a file or an HTTP response and records findings with severity. The highest severity selects a fixed score. The analysis runs inside the Go API process.</p>
-      <details class="evidence-detail">
-        <summary>View the dashboard and analysis history</summary>
-        <figure>
-          <a href="evidence/dataguardian-dashboard.jpg" aria-label="Open the DataGuardian dashboard screenshot at full size">
-            <img src="evidence/dataguardian-dashboard.jpg" width="1264" height="1626" loading="lazy" alt="DataGuardian dashboard with file and URL inputs and seven completed file or URL analysis entries.">
-          </a>
-          <figcaption>Archived repository screenshot from the May 2026 smoke project. The checklist text belongs to the demonstration interface. The history shows previous runs.</figcaption>
-        </figure>
-      </details>
-      <p><a href="https://github.com/joaosalero/dataguardian/blob/master/docs/PORTFOLIO_CASE_STUDY.md">File and URL inspection case study</a></p>
+      <figure>
+        <a href="evidence/dataguardian-file.webp" aria-label="Open the DataGuardian analysis screenshot at full size">
+          <img src="evidence/dataguardian-file.webp" width="1152" height="490" loading="lazy" alt="DataGuardian displays a medium-severity author metadata finding and a risk score of 55 for public-fixture.pdf.">
+        </a>
+        <figcaption>The dashboard shows the result of uploading a 448-byte synthetic PDF. Its author field triggered a medium-severity metadata finding and a score of 55.</figcaption>
+      </figure>
+      <p>A separate test supplied an HTTP response through an in-memory transport. The URL analyser recorded the absence of HTTPS and assigned a low score of 10. The test made no external network request.</p>
+      <p><a href="https://github.com/joaosalero/dataguardian/blob/master/docs/PORTFOLIO_CASE_STUDY.md">File and URL inspection case study</a> · <a href="https://github.com/joaosalero/dataguardian/actions/runs/45231958846/job/137893562735">Dashboard capture run</a></p>
     </section>
 
     <section id="dupliguard" aria-labelledby="dupliguard-heading">

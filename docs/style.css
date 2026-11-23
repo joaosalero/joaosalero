@@ -467,11 +467,13 @@ summary::marker {
   margin:1.4rem 0
 }
 .evidence-main figure a {
-  display:block
+  display:block;
+  width:fit-content;
+  max-width:100%
 }
 .evidence-main img {
   display:block;
-  width:100%;
+  max-width:100%;
   height:auto;
   border:1px solid var(--line)
 }
